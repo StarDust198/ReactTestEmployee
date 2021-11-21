@@ -1,22 +1,25 @@
-import "./app-filter.css";
+import './app-filter.css';
 
 const AppFilter = () => {
     return (
         <div className="btn-group">
-            <button type="button"
-                    className="btn btn-light">
+            <button
+                className="btn btn-light"
+                type="button">
                     Все сотрудники
             </button>
-            <button type="button"
-                    className="btn btn-outline-light">
+            <button
+                className="btn btn-outline-light"
+                type="button">
                     На повышение
             </button>
-            <button type="button"
-                    className="btn btn-outline-light">
+            <button
+                className="btn btn-outline-light"
+                type="button">
                     З/П больше 1000$
             </button>
         </div>
-    )
+    );
 }
 
 export default AppFilter;

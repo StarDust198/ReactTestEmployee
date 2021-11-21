@@ -17,7 +17,7 @@ const EmployeesAddForm = () => {
                         className="btn btn-outline-light">Добавить</button>
             </form>
         </div>
-    )
+    );
 }
 
 export default EmployeesAddForm;
