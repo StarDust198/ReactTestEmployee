@@ -19,6 +19,9 @@ class EmployeesAddForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        const {name, salary} = this.state;
+        if (name.length < 3 || !salary.length) return;
+        this.props.onAdd(name, salary)
         this.setState({
             name: '',
             salary: ''
@@ -26,7 +29,6 @@ class EmployeesAddForm extends Component {
     }
 
     render () {
-        const { onAdd } = this.props;
         const { name, salary } = this.state;
 
         return (
@@ -49,8 +51,7 @@ class EmployeesAddForm extends Component {
                         onChange={this.onValueChange}/>
 
                     <button type="submit"
-                            className="btn btn-outline-light"
-                            onClick={() => onAdd(name, salary)}>Добавить</button>
+                            className="btn btn-outline-light">Добавить</button>
                 </form>
             </div>
         );
