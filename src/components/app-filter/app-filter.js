@@ -8,9 +8,10 @@ const AppFilter = ({filter, onUpdateFilter}) => {
     ];
 
     const buttons = buttonsData.map(({name, label}) => {
+        const clazz = `btn ${filter === name ? "btn-light" : "btn-outline-light"}`
         return (
             <button
-                className={`btn ${filter === name ? "btn-light" : "btn-outline-light"}`}
+                className={clazz}
                 type="button"
                 key={name}
                 onClick={() => onUpdateFilter(name)}>
